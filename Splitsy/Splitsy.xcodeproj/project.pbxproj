@@ -54,14 +54,46 @@
 		D2BD050228763937004CF474 /* Splitsy */ = {
 			isa = PBXGroup;
 			children = (
+				D2BD051928763CE5004CF474 /* Flows */,
 				D2BD050328763937004CF474 /* AppDelegate.swift */,
-				D2BD0517287639DA004CF474 /* BillSplitViewController.swift */,
 				D2BD050528763937004CF474 /* SceneDelegate.swift */,
 				D2BD050C28763938004CF474 /* Assets.xcassets */,
 				D2BD050E28763938004CF474 /* LaunchScreen.storyboard */,
 				D2BD051128763938004CF474 /* Info.plist */,
 			);
 			path = Splitsy;
+			sourceTree = "<group>";
+		};
+		D2BD051928763CE5004CF474 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				D2BD051A28763CF2004CF474 /* BillSplit */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		D2BD051A28763CF2004CF474 /* BillSplit */ = {
+			isa = PBXGroup;
+			children = (
+				D2BD051C28763D16004CF474 /* Presenter */,
+				D2BD051B28763D0B004CF474 /* VC */,
+			);
+			path = BillSplit;
+			sourceTree = "<group>";
+		};
+		D2BD051B28763D0B004CF474 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				D2BD0517287639DA004CF474 /* BillSplitViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		D2BD051C28763D16004CF474 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
