@@ -20,8 +20,10 @@ class BillSplitViewController: UIViewController {
         
         let views = ["billDetails" : self.billDetailsView]
         let viewHConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[billDetails]|", metrics: nil, views: views)
-        let viewVConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[billDetails]-400-|", metrics: nil, views: views)
+        let viewVConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|-50-[billDetails]", metrics: nil, views: views)
         
         self.view.addConstraints(viewHConstraints + viewVConstraints)
+        
+        billDetailsView.configure(billAmount: 4500)
     }
 }
