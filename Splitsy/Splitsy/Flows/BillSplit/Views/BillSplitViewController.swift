@@ -8,6 +8,9 @@
 import UIKit
 
 class BillSplitViewController: UIViewController {
+    
+    // MARK: - Properties
+    var presenter: ViewToPresenterBillDetailProtocol?
     private let billDetailsView = BillDetailsView()
 
     override func viewDidLoad() {
@@ -25,5 +28,12 @@ class BillSplitViewController: UIViewController {
         self.view.addConstraints(viewHConstraints + viewVConstraints)
         
         billDetailsView.configure(billAmount: 4500)
+        
+        presenter?.viewDidLoad()
     }
+}
+
+extension BillSplitViewController: PresenterToViewBillDetailProtocol {
+    
+    
 }
