@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D26F2C602877AA26006BCCE6 /* BillDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F2C5F2877AA26006BCCE6 /* BillDetailsView.swift */; };
 		D2BD050428763937004CF474 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD050328763937004CF474 /* AppDelegate.swift */; };
 		D2BD050628763937004CF474 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD050528763937004CF474 /* SceneDelegate.swift */; };
 		D2BD050D28763938004CF474 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2BD050C28763938004CF474 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D26F2C5F2877AA26006BCCE6 /* BillDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillDetailsView.swift; sourceTree = "<group>"; };
 		D2BD050028763937004CF474 /* Splitsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Splitsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BD050328763937004CF474 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2BD050528763937004CF474 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,17 +78,18 @@
 			isa = PBXGroup;
 			children = (
 				D2BD051C28763D16004CF474 /* Presenter */,
-				D2BD051B28763D0B004CF474 /* VC */,
+				D2BD051B28763D0B004CF474 /* Views */,
 			);
 			path = BillSplit;
 			sourceTree = "<group>";
 		};
-		D2BD051B28763D0B004CF474 /* VC */ = {
+		D2BD051B28763D0B004CF474 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D2BD0517287639DA004CF474 /* BillSplitViewController.swift */,
+				D26F2C5F2877AA26006BCCE6 /* BillDetailsView.swift */,
 			);
-			path = VC;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D2BD051C28763D16004CF474 /* Presenter */ = {
@@ -166,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D26F2C602877AA26006BCCE6 /* BillDetailsView.swift in Sources */,
 				D2BD050428763937004CF474 /* AppDelegate.swift in Sources */,
 				D2BD0518287639DA004CF474 /* BillSplitViewController.swift in Sources */,
 				D2BD050628763937004CF474 /* SceneDelegate.swift in Sources */,
