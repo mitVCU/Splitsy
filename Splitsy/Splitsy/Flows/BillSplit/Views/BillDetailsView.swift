@@ -22,7 +22,6 @@ class BillDetailsView: UIView {
         self.commonInit()
     }
     
-    
     func commonInit() {
         self.backgroundColor = .cyan
         
