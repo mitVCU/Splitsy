@@ -19,7 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = BillSplitViewController()
+        let presenter = BillSplitPresenter()
+        let vc = BillSplitViewController(presenter: presenter)
+        presenter.vc = vc
+        window.rootViewController = vc
         self.window = window
         window.makeKeyAndVisible()
     }

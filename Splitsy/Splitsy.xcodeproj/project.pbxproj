@@ -8,15 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		D26F2C602877AA26006BCCE6 /* BillDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26F2C5F2877AA26006BCCE6 /* BillDetailsView.swift */; };
+		D2BC7F442919C0DF00A3AC35 /* BillSplitPresenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC7F432919C0DF00A3AC35 /* BillSplitPresenterType.swift */; };
+		D2BC7F462930094700A3AC35 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC7F452930094700A3AC35 /* CurrencyTextField.swift */; };
+		D2BC7F4829300AB800A3AC35 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BC7F4729300AB800A3AC35 /* Currency.swift */; };
 		D2BD050428763937004CF474 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD050328763937004CF474 /* AppDelegate.swift */; };
 		D2BD050628763937004CF474 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD050528763937004CF474 /* SceneDelegate.swift */; };
 		D2BD050D28763938004CF474 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2BD050C28763938004CF474 /* Assets.xcassets */; };
 		D2BD051028763938004CF474 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2BD050E28763938004CF474 /* LaunchScreen.storyboard */; };
 		D2BD0518287639DA004CF474 /* BillSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD0517287639DA004CF474 /* BillSplitViewController.swift */; };
+		D2DC7D4F28FB2B7400EEB1B7 /* BillSplitPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC7D4E28FB2B7400EEB1B7 /* BillSplitPresenter.swift */; };
+		D2DC7D5228FB2CF600EEB1B7 /* People.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC7D5128FB2CF600EEB1B7 /* People.swift */; };
+		D2DC7D5428FB2D1400EEB1B7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC7D5328FB2D1400EEB1B7 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D26F2C5F2877AA26006BCCE6 /* BillDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillDetailsView.swift; sourceTree = "<group>"; };
+		D2BC7F432919C0DF00A3AC35 /* BillSplitPresenterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillSplitPresenterType.swift; sourceTree = "<group>"; };
+		D2BC7F452930094700A3AC35 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
+		D2BC7F4729300AB800A3AC35 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		D2BD050028763937004CF474 /* Splitsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Splitsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BD050328763937004CF474 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2BD050528763937004CF474 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +33,9 @@
 		D2BD050F28763938004CF474 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2BD051128763938004CF474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D2BD0517287639DA004CF474 /* BillSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillSplitViewController.swift; sourceTree = "<group>"; };
+		D2DC7D4E28FB2B7400EEB1B7 /* BillSplitPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BillSplitPresenter.swift; path = Splitsy/Flows/BillSplit/BillSplitPresenter.swift; sourceTree = SOURCE_ROOT; };
+		D2DC7D5128FB2CF600EEB1B7 /* People.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People.swift; sourceTree = "<group>"; };
+		D2DC7D5328FB2D1400EEB1B7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +89,8 @@
 		D2BD051A28763CF2004CF474 /* BillSplit */ = {
 			isa = PBXGroup;
 			children = (
-				D2BD051C28763D16004CF474 /* Presenter */,
+				D2DC7D5028FB2CE400EEB1B7 /* Models */,
+				D2DC7D4D28FB2B5900EEB1B7 /* Presenter */,
 				D2BD051B28763D0B004CF474 /* Views */,
 			);
 			path = BillSplit;
@@ -88,15 +101,28 @@
 			children = (
 				D2BD0517287639DA004CF474 /* BillSplitViewController.swift */,
 				D26F2C5F2877AA26006BCCE6 /* BillDetailsView.swift */,
+				D2BC7F452930094700A3AC35 /* CurrencyTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		D2BD051C28763D16004CF474 /* Presenter */ = {
+		D2DC7D4D28FB2B5900EEB1B7 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D2DC7D4E28FB2B7400EEB1B7 /* BillSplitPresenter.swift */,
+				D2BC7F432919C0DF00A3AC35 /* BillSplitPresenterType.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D2DC7D5028FB2CE400EEB1B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2DC7D5128FB2CF600EEB1B7 /* People.swift */,
+				D2DC7D5328FB2D1400EEB1B7 /* Item.swift */,
+				D2BC7F4729300AB800A3AC35 /* Currency.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,10 +195,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2BC7F442919C0DF00A3AC35 /* BillSplitPresenterType.swift in Sources */,
 				D26F2C602877AA26006BCCE6 /* BillDetailsView.swift in Sources */,
 				D2BD050428763937004CF474 /* AppDelegate.swift in Sources */,
+				D2BC7F462930094700A3AC35 /* CurrencyTextField.swift in Sources */,
 				D2BD0518287639DA004CF474 /* BillSplitViewController.swift in Sources */,
 				D2BD050628763937004CF474 /* SceneDelegate.swift in Sources */,
+				D2BC7F4829300AB800A3AC35 /* Currency.swift in Sources */,
+				D2DC7D5428FB2D1400EEB1B7 /* Item.swift in Sources */,
+				D2DC7D5228FB2CF600EEB1B7 /* People.swift in Sources */,
+				D2DC7D4F28FB2B7400EEB1B7 /* BillSplitPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

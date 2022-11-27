@@ -10,8 +10,8 @@ import UIKit
 class BillDetailsView: UIView {
     let title = UILabel()
     let subTitle = UILabel()
-    let billAmount = UILabel()
     let scanRecieptButton = UIButton()
+    let totalAmountTextField = CurrencyTextField()
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -33,26 +33,30 @@ class BillDetailsView: UIView {
         self.subTitle.font = .preferredFont(forTextStyle: .title1)
         
         // configure billAmount label
-        self.billAmount.font = .preferredFont(forTextStyle: .title2)
+        totalAmountTextField.font = .preferredFont(forTextStyle: .title2)
+        totalAmountTextField.textColor = .blue
+        totalAmountTextField.backgroundColor = .white
+        totalAmountTextField.placeholder = "0.00"
+        
         
         // add subviews
         self.title.translatesAutoresizingMaskIntoConstraints = false
         self.subTitle.translatesAutoresizingMaskIntoConstraints = false
-        self.billAmount.translatesAutoresizingMaskIntoConstraints = false
+        self.totalAmountTextField.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.title)
         self.addSubview(self.subTitle)
-        self.addSubview(self.billAmount)
+        self.addSubview(self.totalAmountTextField)
         
         // configure constraints
         let views = ["title" : self.title,
                      "subTitle" : self.subTitle,
-                     "billAmount" : self.billAmount]
+                     "billAmount" : self.totalAmountTextField]
         
         let titleHConstraint = NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[title]|", metrics: nil, views: views)
         let titleVConstraint = NSLayoutConstraint.constraints(withVisualFormat: "V:|-16-[title]", metrics: nil, views: views)
         let subTitleHConstraint = NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[subTitle]|", metrics: nil, views: views)
         let subTitleVConstraint = NSLayoutConstraint.constraints(withVisualFormat: "V:|-8-[subTitle]", metrics: nil, views: views)
-        let billAmountHConstraint = NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[billAmount]|", metrics: nil, views: views)
+        let billAmountHConstraint = NSLayoutConstraint.constraints(withVisualFormat: "H:|-16-[billAmount]-16-|", metrics: nil, views: views)
         let billAmountVConstraint = NSLayoutConstraint.constraints(withVisualFormat: "V:[title]-24-[billAmount]-36-|", metrics: nil, views: views)
         
         // add constraints
@@ -62,7 +66,7 @@ class BillDetailsView: UIView {
     }
     
     func configure(billAmount: Double) {
-        self.billAmount.text = "$\(billAmount.rounded(toPlaces: 2))"
+        self.totalAmountTextField.text = "$\(billAmount.rounded(toPlaces: 2))"
     }
 }
 
